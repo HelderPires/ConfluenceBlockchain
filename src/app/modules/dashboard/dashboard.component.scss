@@ -1,0 +1,17 @@
+.dashboard-grid {
+    width: 100wh;
+    height: 100vh;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    .left {
+        grid-template-rows: 3fr 1fr;
+        .token-list {
+
+        }
+        .token-details {
+
+        }
+    };
+    .right{};
+}

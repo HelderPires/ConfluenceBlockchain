@@ -1,0 +1,10 @@
+<div
+  class="token-item"
+  *ngFor="let token of tokens"
+>
+  <p>{{token.name}}</p><span> by {{token.address}}</span>
+  <!-- <button
+    (click)="add.emit(token.name)"
+    data-test="add-button"
+  >Add to Watchlist</button> -->
+</div>
