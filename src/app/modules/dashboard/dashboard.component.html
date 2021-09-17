@@ -1,17 +1,17 @@
 <div class="dashboard-grid">
-    <div class="left">
+    <div class="left-pane">
       <ng-container>
         <dashboard-tokens-list
-          class="panel"
           [tokens]="(tokens$ | async) || []"
           ></dashboard-tokens-list>
       </ng-container>
-      <ng-container>
-        <dashboard-exchange-list
-        class="exchange-list"
-        [exchanges]="(exchanges$ | async) || []"
-        ></dashboard-exchange-list>
-      </ng-container>
     </div>
-    <div class="right">Two</div>
+    <div class="right-pane">
+        <ng-container>
+          <dashboard-exchange-list
+            class="exchange-list"
+            [exchanges]="(exchanges$ | async) || []"
+          ></dashboard-exchange-list>
+        </ng-container>
+    </div>
   </div>

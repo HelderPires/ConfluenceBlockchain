@@ -1,17 +1,24 @@
+@import '../../../styles.scss';
 .dashboard-grid {
-    width: 100wh;
-    height: 100vh;
-    padding: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    .left {
-        grid-template-rows: 3fr 1fr;
-        .token-list {
+  width: 100wh;
+  height: auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  .left-pane {
+    background-color: $app-cold-glass;
+    border-radius: 1rem;
+    margin-right:2rem;
+    .add-token{
+      margin-bottom: 2rem
+    }
+  };
+  .right-pane {
+    // grid-template-rows: 1fr 4fr;
+    border-radius: 1rem;
 
-        }
-        .token-details {
-
-        }
-    };
-    .right{};
-}
+    }
+    .arbitrage-details{
+      background-color: $app-cold-glass;
+    }
+};

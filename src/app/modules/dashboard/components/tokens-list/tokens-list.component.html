@@ -1,10 +1,15 @@
+<button
+  mat-raised-button
+  color="primary"
+  style="width: 100%;"
+  class="add-button"
+  (click)="openModal()"
+  >Add Token
+</button>
 <div
-  class="token-item"
-  *ngFor="let token of tokens"
->
-  <p>{{token.name}}</p><span> by {{token.address}}</span>
-  <!-- <button
-    (click)="add.emit(token.name)"
-    data-test="add-button"
-  >Add to Watchlist</button> -->
+  class="token-list"
+  *ngFor="let token of tokens">
+  <app-card [title]="token.name" [actions]="{width: '100%', buttons:[{text: 'Arbitrage', type:'primary'}]}">
+      <p> Address: {{token.address}}</p>
+  </app-card>
 </div>

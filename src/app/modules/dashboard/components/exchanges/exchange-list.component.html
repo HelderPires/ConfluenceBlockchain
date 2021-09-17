@@ -1,10 +1,19 @@
-<div
-  class="token-item"
+
+<mat-grid-list
+  [cols]="exchanges.length"
+  gutterSize="3px"
+  class="exchange-list"
+  >
+  <mat-grid-tile
+  class="exchange"
   *ngFor="let exchange of exchanges"
->
-  <p>{{exchange.name}}</p><span> by {{exchange.address}}</span>
-  <!-- <button
-    (click)="add.emit(token.name)"
-    data-test="add-button"
-  >Add to Watchlist</button> -->
-</div>
+  >
+    <div >
+      <p> Name: {{exchange.name}}</p>
+      <br/>
+      <p> Address: {{exchange.address}}</p>
+    </div>
+  </mat-grid-tile>
+
+
+</mat-grid-list>
