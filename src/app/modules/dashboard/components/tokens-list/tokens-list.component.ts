@@ -5,7 +5,7 @@ import { DialogComponent } from '../../../shared/components/dialog/dialog.compon
 @Component({
   selector: 'dashboard-tokens-list',
   templateUrl: './tokens-list.component.html',
-  // styleUrls: ['./token-list.component.css'],
+  styleUrls: ['./tokens-list.component.scss'],
 })
 export class TokenListComponent {
   @Input() tokens: Array<Token> = [];

@@ -15,6 +15,7 @@ import { FormComponent } from './components/form/form.component';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,18 +37,20 @@ import { MatInputModule } from '@angular/material/input';
     MatToolbarModule,
     MatGridListModule,
     MatDialogModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule
   ],
   exports: [
     CardComponent,
     ScrollBarComponent,
-    InputComponent,
     TooltipComponent,
     DialogComponent,
     MatButtonModule,
     MatToolbarModule,
     MatGridListModule,
     MatListModule,
+    FormComponent,
+    DialogComponent,
     InputComponent
   ]
 })
