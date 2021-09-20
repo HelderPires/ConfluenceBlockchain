@@ -51,6 +51,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatListModule,
     FormComponent,
     DialogComponent,
+    MatIconModule,
     InputComponent
   ]
 })
