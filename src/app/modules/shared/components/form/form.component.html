@@ -1,7 +1,15 @@
-<div *ngFor="let formField of formFields">
-  <mat-form-field appearance="fill">
-    <mat-label></mat-label>
-    <input matInput>
-  </mat-form-field>
+FORM COMPONENT
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
 
-</div>
+  <div *ngFor="let formField of formFields">
+    <app-form-field [field]="formField" ></app-form-field>
+  </div>
+
+  <div class="form-row">
+    <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">Save</button>
+  </div>
+</form>
+
+  <div *ngIf="payLoad" class="form-row">
+    <strong>Saved the following values</strong><br>{{payLoad}}
+  </div>

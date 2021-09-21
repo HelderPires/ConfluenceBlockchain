@@ -8,7 +8,6 @@ import { ExchangeListComponent } from './components/exchanges/exchange-list.comp
 import { ArbitrageListComponent } from './components/arbitrage-list/arbitrage-list.component';
 import { TokenAPIService } from 'src/app/services/token-api.service';
 import { SharedModule } from '../shared/shared.module';
-import { TokenAddComponent } from './components/token-add/token-add.component';
 
 
 @NgModule({
@@ -16,8 +15,7 @@ import { TokenAddComponent } from './components/token-add/token-add.component';
     DashboardComponent,
     TokenListComponent,
     ExchangeListComponent,
-    ArbitrageListComponent,
-    TokenAddComponent
+    ArbitrageListComponent
   ],
   imports: [
     CommonModule,

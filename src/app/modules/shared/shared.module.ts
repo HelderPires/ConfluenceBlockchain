@@ -12,10 +12,12 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { GlassPanelComponent } from './components/glass-panel/glass-panel.component';
 import { FormComponent } from './components/form/form.component';
-import { DialogComponent } from './components/dialog/dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormModalComponent } from './components/form-modal/form-modal.component';
+import { FormFieldComponent } from './components/form-field/form-field.component';
+import { MatOptionModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -25,8 +27,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     CardComponent,
     GlassPanelComponent,
     FormComponent,
-    DialogComponent,
-    InputComponent
+    FormModalComponent,
+    InputComponent,
+    FormFieldComponent
   ],
   imports: [
     CommonModule,
@@ -38,21 +41,22 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatGridListModule,
     MatDialogModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatOptionModule
   ],
   exports: [
     CardComponent,
     ScrollBarComponent,
     TooltipComponent,
-    DialogComponent,
+    FormModalComponent,
     MatButtonModule,
     MatToolbarModule,
     MatGridListModule,
     MatListModule,
     FormComponent,
-    DialogComponent,
     MatIconModule,
-    InputComponent
+    InputComponent,
+    FormFieldComponent
   ]
 })
 export class SharedModule { }
