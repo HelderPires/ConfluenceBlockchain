@@ -3,7 +3,7 @@ import { FormControlModel } from '../models/form-control-model';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Injectable()
-export class FormControlServiceService {
+export class FormControlService {
   constructor() { }
   toFormGroup(fields: FormControlModel<string>[]) {
     const group:any = {};

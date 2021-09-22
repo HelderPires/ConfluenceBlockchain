@@ -18,6 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormModalComponent } from './components/form-modal/form-modal.component';
 import { FormFieldComponent } from './components/form-field/form-field.component';
 import { MatOptionModule } from '@angular/material/core';
+import { FormControlService } from '../../services/form-control-service';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,8 @@ import { MatOptionModule } from '@angular/material/core';
     MatDialogModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatOptionModule
+    MatOptionModule,
+    MatFormFieldModule
   ],
   exports: [
     CardComponent,
@@ -57,6 +60,9 @@ import { MatOptionModule } from '@angular/material/core';
     MatIconModule,
     InputComponent,
     FormFieldComponent
+  ],
+  providers:[
+    FormControlService
   ]
 })
 export class SharedModule { }
