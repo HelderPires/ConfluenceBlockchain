@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormControlModel } from '../../../../models/form-control-model';
 import { FormGroup } from '@angular/forms';
 import { FormField } from '../../../../types/form-field';
 
@@ -9,7 +8,7 @@ import { FormField } from '../../../../types/form-field';
   styleUrls: ['./form-field.component.scss']
 })
 export class FormFieldComponent implements OnInit {
-
+  errors: Array<String> = [];
   constructor() {
   }
   @Input() field!: FormField;
@@ -17,7 +16,9 @@ export class FormFieldComponent implements OnInit {
   ngOnInit() {
     console.log(this.field)
 
-    console.log(this.form)
   }
-  // get isValid() { return this.form.controls[this.field.key].valid; }
+  get isValid() {
+    this.errors =  Object.keys(this.field.formControl.errors);
+    return this.field.formControl.valid;
+   }
 }

@@ -10,31 +10,19 @@ import { TextboxFormField } from '../../../../models/texbox-control-model';
 import { FormControlService } from '../../../../services/form-control-service';
 
 const fields: FormControlModel<string>[] = [
-
-  new DropdownFormField({
-    key: 'brave',
-    label: 'Bravery Rating',
-    options: [
-      {key: 'solid',  value: 'Solid'},
-      {key: 'great',  value: 'Great'},
-      {key: 'good',   value: 'Good'},
-      {key: 'unproven', value: 'Unproven'}
-    ],
-    order: 3
-  }),
-
   new TextboxFormField({
-    key: 'firstName',
-    label: 'First name',
-    value: 'Bombasto',
+    key: 'TokenName',
+    label: 'Token name',
+    type: 'text',
     required: true,
     order: 1
   }),
 
   new TextboxFormField({
-    key: 'emailAddress',
-    label: 'Email',
-    type: 'email',
+    key: 'TokenAddress',
+    label: 'TokenAddress',
+    type: 'text',
+    required: true,
     order: 2
   })
 ];
@@ -64,7 +52,7 @@ export class TokenListComponent {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      console.log('token is', result);
     });
   }
 }

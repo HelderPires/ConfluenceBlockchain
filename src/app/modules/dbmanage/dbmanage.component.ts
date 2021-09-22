@@ -7,11 +7,11 @@ import { selectExchanges } from '../../state/selectors/exchanges.selectors';
 import { retrievedExchangeList } from '../../state/actions/exchange.actions';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: 'app-dbmanage',
+  templateUrl: './dbmanage.component.html',
+  styleUrls: ['./dbmanage.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class DBManageComponent implements OnInit {
 
   tokens$ = this.store.pipe(select(selectTokens));
   exchanges$ = this.store.pipe(select(selectExchanges));

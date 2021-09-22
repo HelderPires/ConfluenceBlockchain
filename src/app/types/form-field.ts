@@ -6,3 +6,6 @@ export interface FormField {
   controlName: string;
   formControl: any
 };
+export interface FormFieldError {
+  required: "is required",
+}
