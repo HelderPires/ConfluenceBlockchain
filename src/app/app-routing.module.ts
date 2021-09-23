@@ -1,12 +1,23 @@
-import { Extractor } from '@angular/compiler';
+
+// import { AuthGuard } from './guards/auth.guard';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanActivate } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'dashboard', loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule) },
-  // { path: 'shared', loadChildren: () => import('./modules/shared/shared.module').then(m => m.SharedModule) },
-  // { path: 'charts', loadChildren: () => import('./modules/charts/charts.module').then(m => m.ChartsModule) },
-  { path: '', loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule) }];
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule),
+    // canActivate: [AuthGuard]
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./modules/landing/landing.module').then(m => m.LandingModule)
+  },
+  { path: '',
+    pathMatch:'full',
+    redirectTo: 'home'
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
