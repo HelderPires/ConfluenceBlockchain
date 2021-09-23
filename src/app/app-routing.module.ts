@@ -2,6 +2,7 @@
 // import { AuthGuard } from './guards/auth.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, CanActivate } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
@@ -11,7 +12,8 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./modules/landing/landing.module').then(m => m.LandingModule)
+    component: HomeComponent,
+
   },
   { path: '',
     pathMatch:'full',

@@ -1,0 +1,30 @@
+.landing-page {
+  font-family: DM Sans,ui-sans-serif,system-ui;
+  height: 100VH;
+  width: 100VW;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .title{
+    font-size: xx-large;
+    margin-bottom: 3rem;
+  }
+  .description {
+    font-size: medium;
+    margin-bottom: 6rem;
+  }
+  .actions {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 12rem;
+  }
+  .footer {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

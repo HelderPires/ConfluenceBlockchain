@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { reducers, metaReducers } from './state/reducers/index';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './modules/shared/shared.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

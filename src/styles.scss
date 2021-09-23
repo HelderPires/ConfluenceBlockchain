@@ -24,7 +24,8 @@ $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 
 $app-dark-glass: rgba(0,0,0,0.5);
 $app-cold-glass: rgba(1, 208, 244, 0.2);
-$app-warm-white: rgb(231, 216, 216);
+$app-warm-white: rgb(240, 230, 230);
+$app-cold-white: rgb(230, 239, 240);
 
 @include angular-material-theme($app-theme);
 html, body { height: 100%; }

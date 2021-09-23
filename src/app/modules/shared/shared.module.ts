@@ -48,18 +48,18 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatFormFieldModule
   ],
   exports: [
-    CardComponent,
-    ScrollBarComponent,
-    TooltipComponent,
-    FormModalComponent,
     MatButtonModule,
     MatToolbarModule,
     MatGridListModule,
     MatListModule,
-    FormComponent,
     MatIconModule,
     InputComponent,
-    FormFieldComponent
+    FormFieldComponent,
+    FormComponent,
+    CardComponent,
+    ScrollBarComponent,
+    TooltipComponent,
+    FormModalComponent,
   ],
   providers:[
     FormControlService
