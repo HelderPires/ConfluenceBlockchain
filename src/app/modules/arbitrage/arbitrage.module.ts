@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ArbitrageComponent } from './arbitrage.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ArbitrageComponent
+  ],
   imports: [
     CommonModule
   ]

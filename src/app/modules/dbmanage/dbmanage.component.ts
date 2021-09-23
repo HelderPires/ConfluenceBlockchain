@@ -20,7 +20,9 @@ export class DBManageComponent implements OnInit {
   constructor(
     private tokensService: TokenAPIService,
     private store: Store
-  ) { }
+  ) {
+    console.log('TEST')
+  }
 
   ngOnInit() {
     this.tokensService

@@ -4,7 +4,7 @@ import { Token } from '../../../../state/models/tokens.model';
 @Component({
   selector: 'dashboard-arbitrage-list',
   templateUrl: './arbitrage-list.component.html',
-  styleUrls: ['../../dashboard.component.scss']
+  styleUrls: ['./arbitrage-list.component.scss']
 })
 export class ArbitrageListComponent {
   @Input() arbitrages: Array<Token> = [];

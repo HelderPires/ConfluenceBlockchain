@@ -20,6 +20,7 @@ import { FormFieldComponent } from './components/form-field/form-field.component
 import { MatOptionModule } from '@angular/material/core';
 import { FormControlService } from '../../services/form-control-service';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     FormComponent,
     FormModalComponent,
     InputComponent,
-    FormFieldComponent
+    FormFieldComponent,
+    NavbarComponent
   ],
   imports: [
     CommonModule,
@@ -60,6 +62,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     ScrollBarComponent,
     TooltipComponent,
     FormModalComponent,
+    NavbarComponent
   ],
   providers:[
     FormControlService
