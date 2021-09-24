@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LiquidationComponent } from './liquidation.component';
+import { SharedModule } from '../shared/shared.module';
+import { LiquidationRoutingModule } from './liquidation-routing.module';
 
 
 
@@ -9,7 +11,9 @@ import { LiquidationComponent } from './liquidation.component';
     LiquidationComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule,
+    LiquidationRoutingModule
   ]
 })
 export class LiquidationModule { }

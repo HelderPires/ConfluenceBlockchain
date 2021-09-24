@@ -2,10 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Token } from '../../../../state/models/tokens.model';
 import { FormModalComponent } from '../../../shared/components/form-modal/form-modal.component';
-import { FormField } from '../../../../types/form-field';
-import { FormGroup } from '@angular/forms';
 import { FormControlModel } from '../../../../models/form-control-model';
-import { DropdownFormField } from '../../../../models/dropdown-control-model';
 import { TextboxFormField } from '../../../../models/texbox-control-model';
 import { FormControlService } from '../../../../services/form-control-service';
 
@@ -28,7 +25,7 @@ const fields: FormControlModel<string>[] = [
 ];
 
 @Component({
-  selector: 'dashboard-tokens-list',
+  selector: 'dbmanage-tokens-list',
   templateUrl: './tokens-list.component.html',
   styleUrls: ['./tokens-list.component.scss'],
 })

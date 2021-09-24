@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output, OnInit, AfterViewInit } from '@
 import { Exchange } from '../../../../state/models/exchange.model';
 
 @Component({
-  selector: 'dashboard-exchange-list',
+  selector: 'dbmanage-exchange-list',
   templateUrl: './exchange-list.component.html',
   styleUrls: ['./exchange-list.component.scss'],
 })

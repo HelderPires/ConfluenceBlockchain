@@ -6,6 +6,7 @@ import { ExchangeListComponent } from './components/exchanges/exchange-list.comp
 import { ArbitrageListComponent } from './components/arbitrage-list/arbitrage-list.component';
 import { TokenAPIService } from 'src/app/services/token-api.service';
 import { SharedModule } from '../shared/shared.module';
+import { DBManageRoutingModule } from './dbmanage-routing.module';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     CommonModule,
+    DBManageRoutingModule,
     SharedModule
   ],
   providers: [
