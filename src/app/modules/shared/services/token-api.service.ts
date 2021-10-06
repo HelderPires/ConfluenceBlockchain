@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 import { of, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Token } from '../state/models/tokens.model';
+import { Token } from '../../../state/models/tokens.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -26,6 +26,30 @@ export class TokenAPIService {
       },
       {
         name: 'USDT',
+        address: 'xOOOOOOOOOO'
+      },
+      {
+        name: 'USDC',
+        address: 'xOOOOOOOOOO'
+      },
+      {
+        name: 'USDC',
+        address: 'xOOOOOOOOOO'
+      },
+      {
+        name: 'USDC',
+        address: 'xOOOOOOOOOO'
+      },
+      {
+        name: 'USDC',
+        address: 'xOOOOOOOOOO'
+      },
+      {
+        name: 'USDC',
+        address: 'xOOOOOOOOOO'
+      },
+      {
+        name: 'USDC',
         address: 'xOOOOOOOOOO'
       },
       {

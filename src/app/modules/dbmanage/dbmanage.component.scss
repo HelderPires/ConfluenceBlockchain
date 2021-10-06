@@ -1,24 +1,21 @@
 @import '../../../styles.scss';
 .dashboard-grid {
-  width: 100wh;
-  height: auto;
-  padding: 2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 100%;
+  max-height: 100%;
   display: grid;
-  grid-template-columns: 1fr 5fr;
-  .left-pane {
-    background-color: $app-cold-glass;
-    border-radius: 1rem;
+  .list {
+    overflow-x: hidden;
+    border-radius: 0.5rem;
     margin-right:2rem;
-    .add-token{
-      margin-bottom: 2rem
-    }
+    padding-right: 0.5rem;
   };
-  .right-pane {
-    // grid-template-rows: 1fr 4fr;
-    border-radius: 1rem;
-
-    }
-    .arbitrage-details{
-      background-color: $app-cold-glass;
-    }
 };
+
+.list-card {
+
+}
+
+cdk-virtual-scroll-viewport {
+  height: 500px;
+}

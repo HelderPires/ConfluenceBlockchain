@@ -18,9 +18,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormModalComponent } from './components/form-modal/form-modal.component';
 import { FormFieldComponent } from './components/form-field/form-field.component';
 import { MatOptionModule } from '@angular/material/core';
-import { FormControlService } from '../../services/form-control-service';
+import { FormControlService } from '../shared/services/form-control-service';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ListComponent } from './components/list/list.component';
+import { ScrollbarComponent } from './components/scrollbar/scrollbar.component';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     FormModalComponent,
     InputComponent,
     FormFieldComponent,
-    NavbarComponent
+    NavbarComponent,
+    ListComponent,
+    ScrollbarComponent
   ],
   imports: [
     CommonModule,
@@ -47,7 +52,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     MatInputModule,
     ReactiveFormsModule,
     MatOptionModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    ScrollingModule
   ],
   exports: [
     MatButtonModule,
@@ -62,7 +68,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ScrollBarComponent,
     TooltipComponent,
     FormModalComponent,
-    NavbarComponent
+    NavbarComponent,
+    ListComponent,
+    ScrollbarComponent,
+    ScrollingModule
   ],
   providers:[
     FormControlService

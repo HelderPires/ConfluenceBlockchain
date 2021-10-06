@@ -1,17 +1,100 @@
 <div class="dashboard-grid">
-  <div class="left-pane">
-    <ng-container>
-      <dbmanage-tokens-list
-        [tokens]="(tokens$ | async) || []"
-        ></dbmanage-tokens-list>
+  <app-list class="list">
+    <ng-container ngProjectAs="[header]">
+      <button
+        mat-raised-button
+        color="primary"
+        style="width: 100%;"
+        class="add-button"
+        (click)="openModal()"
+      >Add Network
+      </button>
     </ng-container>
-  </div>
-  <div class="right-pane">
-      <ng-container>
-        <dbmanage-exchange-list
-          class="exchange-list"
-          [exchanges]="(exchanges$ | async) || []"
-        ></dbmanage-exchange-list>
-      </ng-container>
-  </div>
+    <ng-container ngProjectAs="[listItems]">
+      <cdk-virtual-scroll-viewport [itemSize]="20" style='overflow-x:"hidden"' >
+        <mat-list class="list-body">
+          <app-card *cdkVirtualFor="let token of tokens$ | async"
+            [title]="token.name"
+            [actions]="{width: '100%',
+            buttons:[{text: 'Delete', type:'accent'}]}">
+            <p> Address: {{token.address}}</p>
+          </app-card>
+        </mat-list>
+    </cdk-virtual-scroll-viewport>
+    </ng-container>
+  </app-list>
+  <app-list class="list">
+    <ng-container ngProjectAs="[header]">
+      <button
+        mat-raised-button
+        color="primary"
+        style="width: 100%;"
+        class="add-button"
+        (click)="openModal()"
+      >Add exchange
+      </button>
+    </ng-container>
+    <ng-container ngProjectAs="[listItems]">
+      <cdk-virtual-scroll-viewport [itemSize]="10">
+        <mat-list class="list-body">
+          <app-card *cdkVirtualFor="let exchange of exchanges$ | async"
+            class="list-card"
+            [title]="exchange.name"
+            [actions]="{width: '100%',
+            buttons:[{text: 'Delete', type:'accent'}]}"
+            >
+            <p> Address: {{exchange.address}}</p>
+          </app-card>
+        </mat-list>
+      </cdk-virtual-scroll-viewport>
+    </ng-container>
+  </app-list>
+  <app-list class="list">
+    <ng-container ngProjectAs="[header]">
+      <button
+        mat-raised-button
+        color="primary"
+        style="width: 100%;"
+        class="add-button"
+        (click)="openModal()"
+      >Add Token
+      </button>
+    </ng-container>
+    <ng-container ngProjectAs="[listItems]">
+      <cdk-virtual-scroll-viewport [itemSize]="20" style='overflow-x:"hidden"' >
+        <mat-list class="list-body">
+          <app-card *cdkVirtualFor="let token of tokens$ | async"
+            [title]="token.name"
+            [actions]="{width: '100%',
+            buttons:[{text: 'Delete', type:'accent'}]}">
+            <p> Address: {{token.address}}</p>
+          </app-card>
+        </mat-list>
+    </cdk-virtual-scroll-viewport>
+    </ng-container>
+  </app-list>
+  <app-list class="list">
+    <ng-container ngProjectAs="[header]">
+      <button
+        mat-raised-button
+        color="primary"
+        style="width: 100%;"
+        class="add-button"
+        (click)="openModal()"
+      >Add Lender
+      </button>
+    </ng-container>
+    <ng-container ngProjectAs="[listItems]">
+      <cdk-virtual-scroll-viewport [itemSize]="20" style='overflow-x:"hidden"' >
+        <mat-list class="list-body">
+          <app-card *cdkVirtualFor="let token of tokens$ | async"
+            [title]="token.name"
+            [actions]="{width: '100%',
+            buttons:[{text: 'Delete', type:'accent'}]}">
+            <p> Address: {{token.address}}</p>
+          </app-card>
+        </mat-list>
+    </cdk-virtual-scroll-viewport>
+    </ng-container>
+  </app-list>
 </div>
