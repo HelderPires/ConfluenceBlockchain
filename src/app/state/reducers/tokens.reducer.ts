@@ -1,4 +1,4 @@
-import { createReducer, on, Action } from '@ngrx/store';
+import { createReducer, on } from '@ngrx/store';
 
 import { retrievedTokenList } from '../actions/tokens.actions';
 import { Token } from '../models/tokens.model';

@@ -1,15 +1,20 @@
+
+export type Token = {
+    name: string;
+    address: string;
+}
+
 export type Wallet = {
   icon: string,
   name: string
 }
 
-export type TokenType = {
-  token: string,
-  balance: string
+
+export type Balance = {
+  token: Token;
+  balance: string;
+  balanceInWei?: string
 }
 
-export type AccountType = {
-  address: string,
-  balance: string,
-  tokens: TokenType[]
-}
+
+export type WalletBalance = Array<Balance>
