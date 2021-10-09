@@ -9,17 +9,16 @@ import { FormField } from '../../../../types/form-field';
 })
 export class FormComponent implements OnInit{
   @Input() form!: FormGroup;
+  @Input() labels!: any;
   controls: Array<FormField> = [];
   payLoad = '';
 
-  constructor() {
-  }
   ngOnInit(){
-
     this.controls = Object.keys(this.form.controls).map(key =>
       {
         return {
-          label: key,
+          label: this.labels[key],
+          //TODO add dynamic types
           type: 'text',
           controlName: key,
           formControl: this.form.controls[key]
@@ -27,6 +26,6 @@ export class FormComponent implements OnInit{
     });
   }
   onSubmit() {
-    this.payLoad = JSON.stringify(this.form.getRawValue());
+    // TODO Change state and trigger @Effect to API
   }
 }

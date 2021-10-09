@@ -1,9 +1,9 @@
 
-interface ButtonAction {
+type ButtonAction = {
   text: string;
   type: string;
 };
-export interface ButtonActionList {
+export type ButtonActionList = {
   align?: "start" | "end";
   width?: string;
   buttons: Array<ButtonAction>

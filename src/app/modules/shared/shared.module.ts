@@ -24,7 +24,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ListComponent } from './components/list/list.component';
 import { ScrollbarComponent } from './components/scrollbar/scrollbar.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
-
+import { RouterModule } from '@angular/router';
+import { NavElementComponent } from './components/nav-element/nav-element.component';
+import {MatSelectModule} from '@angular/material/select'
 @NgModule({
   declarations: [
     ScrollBarComponent,
@@ -38,9 +40,11 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     FormFieldComponent,
     NavbarComponent,
     ListComponent,
-    ScrollbarComponent
+    ScrollbarComponent,
+    NavElementComponent
   ],
   imports: [
+    RouterModule,
     CommonModule,
     MatCardModule,
     MatButtonModule,
@@ -50,10 +54,11 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     MatGridListModule,
     MatDialogModule,
     MatInputModule,
+    MatSelectModule,
     ReactiveFormsModule,
     MatOptionModule,
     MatFormFieldModule,
-    ScrollingModule
+    ScrollingModule,
   ],
   exports: [
     MatButtonModule,
@@ -61,6 +66,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     MatGridListModule,
     MatListModule,
     MatIconModule,
+    MatCardModule,
     InputComponent,
     FormFieldComponent,
     FormComponent,

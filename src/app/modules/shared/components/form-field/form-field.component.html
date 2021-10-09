@@ -8,17 +8,12 @@
           [id]="field.controlName"
           [type]="field.type"
           />
-
-        <!--
-          TODO: IMPLEMENT OTHER INPUTS
-          <mat-select [id]="field.controlName" *ngSwitchCase="'dropdown'" [formControlName]="field.controlName">
-          <mat-option *ngFor="let opt of field.options" [value]="opt.key">{{opt.value}}</mat-option>
-        </mat-select> -->
+          <!-- TODO: IMPLEMENT OTHER INPUT TYPES -->
       </div>
     </mat-form-field>
-  <mat-error *ngIf="!isValid">
+  <mat-error *ngIf="!isValid && isTouched">
     <div *ngFor="let error of errors">
-      {{field.label}} {{error}}
+      <h5>* {{field.label}} {{error}} </h5>
     </div>
   </mat-error>
   </div>

@@ -1,26 +1,12 @@
+
 <mat-toolbar class="navbar" color="primary">
-  <div>
-    <span>Hydra Blockchain App</span>
-    <button mat-button>TODO: NETWORK SELECT</button>
+  <div class="navigation-links left">
+    <div *ngFor="let component of leftComponents">
+      <app-nav-element [component]="component"></app-nav-element>
+    </div>
   </div>
-  <div class="navigation-links">
-    <button mat-button>
-      TODO: WALLET ADDRESS
-    </button>
-    <button mat-button>
-      Manage Wallet
-    </button>
-    <button mat-button>
-      Arbitrage
-    </button>
-    <button mat-button>
-      Liquidation
-    </button>
-    <button mat-button>
-      Database
-    </button>
-    <button mat-icon-button>
-      <mat-icon>settings</mat-icon>
-    </button>
-  </div>
+  <div class="navigation-links right" ></div>
+    <div *ngFor="let component of rightComponents">
+      <app-nav-element [component]="component"></app-nav-element>
+    </div>
 </mat-toolbar>

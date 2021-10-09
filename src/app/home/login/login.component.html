@@ -1,0 +1,11 @@
+<mat-list *ngFor="let wallet of wallets" class="login-modal">
+  <mat-list-item>
+    <h1>Connect to a Wallet</h1>
+  </mat-list-item>
+  <mat-list-item (click)="login()">
+    <mat-card  class="wallet-card">
+        <div class="wallet-icon" [ngStyle]="{'background-image': 'url(' + wallet.icon + ')'}"></div>
+        <h2>{{wallet.name}}</h2>
+    </mat-card>
+  </mat-list-item>
+</mat-list>

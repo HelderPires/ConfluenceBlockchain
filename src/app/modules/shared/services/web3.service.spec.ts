@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { FormContentService } from './form-content-service';
+import { Web3Service } from './web3.service';
 
-describe('FormContentServiceService', () => {
-  let service: FormContentService;
+describe('Web3Service', () => {
+  let service: Web3Service;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(FormContentService);
+    service = TestBed.inject(Web3Service);
   });
 
   it('should be created', () => {

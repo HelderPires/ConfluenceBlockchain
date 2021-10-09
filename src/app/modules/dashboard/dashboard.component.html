@@ -1,5 +1,5 @@
 <div class="dashboard">
-  <app-navbar class="navbar"></app-navbar>
+  <app-navbar class="navbar" [leftComponents]="leftNavbarComponents" [rightComponents]="rightNavbarComponents"></app-navbar>
   <div  class="content">
     <router-outlet></router-outlet>
   </div>

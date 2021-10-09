@@ -1,0 +1,25 @@
+<ng-container *ngIf="component.type === 'button'">
+  <button mat-button [routerLink]="[component.link]">
+    {{component.text}}
+  </button>
+</ng-container>
+<ng-container *ngIf="component.type === 'text'">
+  <span [routerLink]="[component.link]">
+    {{component.text}}
+  </span>
+</ng-container>
+<ng-container *ngIf="component.type === 'icon'">
+  <button mat-icon-button [routerLink]="[component.icon]">
+    <mat-icon>{{component.icon}}</mat-icon>
+  </button>
+</ng-container>
+<ng-container *ngIf="component.type === 'dropdown'">
+  <mat-form-field  class="dropdown" floatLabel="never">
+    <mat-label>{{component.text}}</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let option of component.options" [value]="option.value">
+        {{option.text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</ng-container>

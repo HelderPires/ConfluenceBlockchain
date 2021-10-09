@@ -7,9 +7,14 @@ export class FormControlService {
   constructor() { }
   toFormGroup(fields: FormControlModel<string>[]) {
     const group:any = {};
-    fields.forEach(field => {
+    fields.map(field => {
       group[field.key] = field.required ? new FormControl(field.value || '', Validators.required) : new FormControl(field.value || '');
     });
     return new FormGroup(group)
+  }
+  getLabels(fields: FormControlModel<string>[]) {
+    let labels : any = {}
+    fields.forEach(field => labels[field.key] = field.label)
+    return labels
   }
 }

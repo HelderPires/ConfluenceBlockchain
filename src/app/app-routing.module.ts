@@ -6,9 +6,8 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
-    path: 'dashboard',
+    path: 'dashboard/:userWallet',
     loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule),
-    // canActivate: [AuthGuard]
   },
   {
     path: 'home',
