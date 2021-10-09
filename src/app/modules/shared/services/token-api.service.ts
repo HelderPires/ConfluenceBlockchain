@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 import { of, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Token } from '../../../state/models/tokens.model';
+import { Token } from '../../../types/web3';
 @Injectable({
   providedIn: 'root'
 })

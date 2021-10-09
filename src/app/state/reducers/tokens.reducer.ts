@@ -1,7 +1,7 @@
 import { createReducer, on } from '@ngrx/store';
 
 import { retrievedTokenList } from '../actions/tokens.actions';
-import { Token } from '../models/tokens.model';
+import { Token } from '../../types/web3';
 
 export const initialState: ReadonlyArray<Token> = [];
 

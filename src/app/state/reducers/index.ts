@@ -11,10 +11,12 @@ import { environment } from '../../../environments/environment';
 
 import * as fromTokens from './tokens.reducer';
 import * as fromExchanges from './exchanges.reducer';
+import * as fromActiveUser from './user.reducer';
 
 export const reducers: ActionReducerMap<AppState> = {
   tokens: fromTokens.tokensReducer,
-  exchanges: fromExchanges.exchangesReducer
+  exchanges: fromExchanges.exchangesReducer,
+  activeUser: fromActiveUser.activeUserReducer
 };
 
 

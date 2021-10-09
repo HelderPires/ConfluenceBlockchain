@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { Token } from '../models/tokens.model';
+import { Token } from '../../types/web3';
 
 export const addToken = createAction(
   '[Token List] Add Token',

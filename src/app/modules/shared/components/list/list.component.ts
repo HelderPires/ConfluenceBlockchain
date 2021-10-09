@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Token } from '../../../../state/models/tokens.model';
 import { FormModalComponent } from '../../../shared/components/form-modal/form-modal.component';
 import { FormControlModel } from '../../../../models/form-control-model';
 import { TextboxFormField } from '../../../../models/texbox-control-model';

@@ -1,6 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
-import { Token } from '../models/tokens.model';
 import { retrievedExchangeList } from '../actions/exchange.actions';
+import { Token } from '../../types/web3';
 
 export const initialState: ReadonlyArray<Token> = [];
 

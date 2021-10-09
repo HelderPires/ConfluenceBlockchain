@@ -6,7 +6,7 @@ export const initialState: ActiveUser = {
   activeUserWallet: ''
 };
 
-export const activeUSerReducer = createReducer(
+export const activeUserReducer = createReducer(
   initialState,
-  on(userLoggedin, (state, { activeUserWallet }) => ({...state, activeUserWallet: state.activeUserWallet}))
+  on(userLoggedin, (state, { activeUserWallet }) => ({...state, activeUserWallet: activeUserWallet}))
 );

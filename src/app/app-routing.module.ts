@@ -6,7 +6,7 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
-    path: 'dashboard/:userWallet',
+    path: 'dashboard',
     loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule),
   },
   {
