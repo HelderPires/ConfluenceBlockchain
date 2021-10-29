@@ -28,7 +28,7 @@ jobs:
           [ "${{env.prev_app_version}}" != "${{env.app_version}}" ] && true || false
 
       - name: Build test image
-        run: docker build -t hydra-test . # --target test .
+        run: docker build -t test . # --target test .
 
       - name: Run tests
-        run: echo docker run --rm hydra-test
+        run: echo docker run --rm test
